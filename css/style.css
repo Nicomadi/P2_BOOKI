@@ -1,6 +1,9 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 :root {
@@ -30,6 +33,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -56,6 +63,210 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+
+/*********** Mobile ***********/
+@media (max-width:768px) {
+    .main-container{
+        padding: 0px;
+    }
+    
+}
+
+/********************************* ENTETE *********************************/
+/*********** Desktop ***********/
+
+
+
+/********************************* Titre et sous titre *********************************/
+.titre-page-recherche{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+    .titre-page-recherche, .sous-titre-page-recherche{
+        padding:0 15px;
+    }
+    
+}
+/********************************* RECHERCHE *********************************/
+/*********** Desktop ***********/
+
+.recherche-form{
+    margin: 35px 0;
+    display: flex;
+}
+
+.div-logo-position{
+    width: 50px;
+    height: 50px;
+}
+
+.fa-location-dot{
+    color: black;
+    font-size: 25px;
+    background-color: var(--main-bg-color);
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+}
+.recherche-btn, .recherche-txt {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.recherche-txt{
+    width: auto;
+    box-sizing: content-box;
+    border: 1px solid var(--main-bg-color);
+    text-align: center;
+}
+
+.recherche-btn{
+    background-color: var(--main-color);
+    color: white;
+    padding: 0 15px;
+    border-radius: 0 15px 15px 0;
+
+}
+
+.fa-magnifying-glass {
+    display: none;
+}
+/*********** Mobile ***********/
+@media (max-width: 768px) {
+
+    .recherche-form{
+        padding: 0 10px;
+    }
+
+    .recherche-txt{
+        width: 0;
+        flex-grow: 1;
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    .recherche-btn-txt{
+        display: none;
+    }
+
+    .recherche-btn{
+        border-radius: 15px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .fa-magnifying-glass{
+        display: block;
+        color: white;
+    }
+    
+}
+
+/********************************* Filtre *********************************/
+/*********** Desktop***********/
+
+.filtres{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.filtres>h2 {
+    font-size: 18px;
+}
+
+.filtre-btn-liste{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-evenly;
+}
+
+.filtre-btn{
+    box-sizing: border-box;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 25px;
+    height: 50px;
+    background-color:white ;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.filtre-btn:hover{
+    background-color: var(--filter-bg-color);
+}
+
+/*********** Tablette ***********/
+@media ( max-width: 1024px) and (min-width: 768px) {
+    .filtres{
+        flex-wrap: wrap;
+    }
+    .filtres>h2{
+        flex-basis: 100%;
+    }
+
+    .filtre-btn{
+        font-size: 16px;
+    }
+}
+
+/*********** Mobile ***********/
+@media ( max-width: 768px) {
+    .filtres{
+        flex-wrap: wrap;
+    }
+    .filtres>h2{
+        flex-basis: 100%;
+        padding-left: 15px;
+    }
+
+    .filtre-btn-liste{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .filtre-btn{
+        flex-basis: 45%;
+        font-size: 14px;
+    }
+}
+
+/********************************* INFORMATION *********************************/
+/*********** Desktop ***********/
+
+.information{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.fa-info{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--main-bg-color) 2px;
+    border-radius: 50%;
+}
+
+/*********** Mobile ***********/
+@media (max-width: 768px) {
+    .information{
+        padding: 0 10px;
+    }
 }
 
 /****** Hebergements And Populaires ***********/
@@ -164,4 +375,39 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+}
+
+
+/********************************* Footer *********************************/
+/*********** Dektop ***********/
+
+footer{
+    display: flex;
+    align-items: start;
+    background-color: var(--main-bg-color);
+}
+
+.section-pied-de-page{
+    flex-grow: 0.3;
+    padding: 30px;
+}
+
+.titre-pied-de-page{
+    padding-bottom: 20px;
+}
+.liste-lien{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/*********** Mobile ***********/
+
+@media (max-width: 768px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
