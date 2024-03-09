@@ -76,7 +76,66 @@ li {
 /********************************* ENTETE *********************************/
 /*********** Desktop ***********/
 
+header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
 
+.img-logo{
+    padding-top: 30px;
+    height: 20px;
+}
+
+.liste-lien-nav{
+    box-sizing: border-box;
+    padding-top: 20px;
+    display: flex;
+    gap: 4em;
+}
+
+.lien-nav{
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+.lien-nav:hover{
+    color: var(--main-color);
+    border-top: solid var(--main-color) 3px;
+}
+
+/*********** Mobile ***********/
+@media (max-width:768px) {
+    header{
+        height: 115px;
+        flex-wrap: wrap;
+    }
+    .div-logo, nav{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .liste-lien-nav{
+        justify-content: space-evenly;
+        gap: 1em;
+    }
+
+    .liste-lien-nav>li {
+        flex-basis: 50%;
+        box-sizing: border-box;
+    }
+
+    .lien-nav{
+        display: block;
+        height: 100%;
+        padding-bottom: 15px;
+    }
+
+    .lien-nav:hover{
+        border-top: none;
+        border-bottom: solid var(--main-color);
+    }
+}
 
 /********************************* Titre et sous titre *********************************/
 .titre-page-recherche{
