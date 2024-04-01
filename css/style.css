@@ -569,10 +569,6 @@ main{
 
 @media screen and (max-width: 767.99px) {
 
-    .section-activities{
-        
-    }
-
     .proposed-activities{
         flex-direction: column;
     }
